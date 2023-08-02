@@ -1,4 +1,4 @@
-export const UNI_LIST = 'https://ipfs.filebase.io/ipfs/QmS2NTS4Btty4812M3vUSZU8i2v8qPVwemp9vskh3Gygv5'
+export const UNI_LIST = 'https://ipfs.filebase.io/ipfs/QmdV1AJhHjrn3TxJqvzrx6F4y7PUT8z7rLdqPCXvayhTEX'
 export const UNI_EXTENDED_LIST = 'https://gateway.ipfs.io/ipns/extendedtokens.uniswap.org'
 const UNI_UNSUPPORTED_LIST = 'https://ipfs.filebase.io/ipfs/Qme6X3w6H8Xrh7DCtsApad61CejNQGtiJ8pSdmcuZgEoRv'
 const AAVE_LIST = 'tokenlist.aave.eth'
