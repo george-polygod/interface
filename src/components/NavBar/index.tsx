@@ -112,13 +112,14 @@ const Navbar = ({ blur }: { blur: boolean }) => {
         <Box display="flex" height="full" flexWrap="nowrap">
           <Box className={styles.leftSideContainer}>
             <Box className={styles.logoContainer}>
-              <UniIcon
+              {/* <UniIcon
                 width="48"
                 height="48"
                 data-testid="uniswap-logo"
-                className={styles.logo}
-                onClick={handleUniIconClick}
-              />
+              
+              /> */}
+               <img src='/images/Jailbreak-Cydia-Tweak-Icon.png' width={"48"} height={"48"}   className={styles.logo}
+                onClick={handleUniIconClick}/>
             </Box>
             {!isNftPage && (
               <Box display={{ sm: 'flex', lg: 'none' }}>
