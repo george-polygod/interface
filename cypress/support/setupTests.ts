@@ -32,7 +32,7 @@ beforeEach(() => {
   // Mock our own token list responses to avoid the latency of IPFS.
   cy.intercept('https://gateway.ipfs.io/ipns/tokens.uniswap.org', TokenListJSON)
     .intercept('https://gateway.ipfs.io/ipns/extendedtokens.uniswap.org', { statusCode: 404 })
-    .intercept('https://gateway.ipfs.io/ipns/unsupportedtokens.uniswap.org', { statusCode: 404 })
+    .intercept('https://ipfs.filebase.io/ipfs/Qmag7V6VzUQxN7Qfzr8zEyGkuV1JhDqkYTAd9efBR9MTj9', { statusCode: 404 })
 
   // Reset hardhat between tests to ensure isolation.
   // This resets the fork, as well as options like automine.
