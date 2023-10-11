@@ -13,7 +13,7 @@ gql`
       chain
       standard
       address
-      symbol
+      symbol: FTX
       market(currency: USD) {
         id
         price {
@@ -43,9 +43,23 @@ gql`
 export default function useTrendingTokens(chainId?: number) {
   const chain = chainIdToBackendName(chainId)
   const { data, loading } = useTrendingTokensQuery({ variables: { chain } })
-
+console.log(data?.topTokens?.map((token) => unwrapToken(chainId ?? 1, token)))
+console.log("res")
   return useMemo(
-    () => ({ data: data?.topTokens?.map((token) => unwrapToken(chainId ?? 1, token)), loading }),
+    () => ({ data: [
+      {
+        "__typename": "Token",
+
+        "decimals": 18,
+        "name": "HairyPlotterFTX",
+        "chain": "ETHEREUM",
+        "standard": "ERC20",
+        "address": "0xb1a822ce8c799b0777ed1f260113819247e1bf26",
+        "symbol": "FTX",
+        "imageUrl":""
+      
+       
+    }].map((token) => unwrapToken(chainId ?? 1, token)), loading }),
     [chainId, data?.topTokens, loading]
   )
 }
