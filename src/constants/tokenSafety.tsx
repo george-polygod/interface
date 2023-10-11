@@ -60,6 +60,13 @@ export type Warning = {
   canProceed: boolean
 }
 
+
+const NoWarning: Warning = {
+  level: WARNING_LEVEL.MEDIUM,
+  message: <Trans>Caution</Trans>,
+  canProceed: true,
+}
+
 const MediumWarning: Warning = {
   level: WARNING_LEVEL.MEDIUM,
   message: <Trans>Caution</Trans>,
@@ -96,9 +103,9 @@ export function checkWarning(tokenAddress: string, chainId?: number | null) {
     case TOKEN_LIST_TYPES.UNKNOWN:
       return null
     case TOKEN_LIST_TYPES.BLOCKED:
-      return null
+      return NoWarning
     case TOKEN_LIST_TYPES.BROKEN:
-      return null
+      return NoWarning
   }
 }
 
