@@ -118,7 +118,7 @@ const Navbar = ({ blur }: { blur: boolean }) => {
                 data-testid="uniswap-logo"
               
               /> */}
-               <img src='/images/logo.png' width={"48"} height={"48"}   className={styles.logo}
+               <img src='/images/logo.png' width={"100"} height={"100"}   className={styles.logo}
                 onClick={handleUniIconClick}/>
             </Box>
             {!isNftPage && (
