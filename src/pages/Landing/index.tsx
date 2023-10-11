@@ -80,7 +80,7 @@ const Glow = styled.div`
   position: absolute;
   top: 68px;
   bottom: 0;
-  background: radial-gradient(72.04% 72.04% at 50% 3.99%, #ff37eb 0%, rgba(166, 151, 255, 0) 100%);
+  background: radial-gradient(72.04% 72.04% at 50% 3.99%, #f7d621 0%, rgba(166, 151, 255, 0) 100%);
   filter: blur(72px);
   border-radius: 24px;
   max-width: 480px;
@@ -117,10 +117,10 @@ const TitleText = styled.h1<{ isDarkMode: boolean }>`
   ${({ isDarkMode }) =>
     isDarkMode
       ? css`
-          background: linear-gradient(20deg, rgba(255, 244, 207, 1) 10%, rgba(255, 87, 218, 1) 100%);
+          background: linear-gradient(20deg, #F2AE6D 10%, #f7d621 100%);
         `
       : css`
-          background: linear-gradient(10deg, rgba(255, 79, 184, 1) 0%, rgba(255, 159, 251, 1) 100%);
+          background: linear-gradient(10deg, #F2AE6D 0%, #f7d621 100%);
         `};
   background-clip: text;
   -webkit-background-clip: text;
@@ -162,13 +162,13 @@ const LandingButton = styled(BaseButton)`
 `
 
 const ButtonCTA = styled(LandingButton)`
-  background: linear-gradient(93.06deg, #ff00c7 2.66%, #ff9ffb 98.99%);
+  background: linear-gradient(93.06deg, #f7d621 2.66%, #F2AE6D 98.99%);
   border: none;
   color: ${({ theme }) => theme.white};
   transition: ${({ theme }) => `all ${theme.transition.duration.medium} ${theme.transition.timing.ease}`};
 
   &:hover {
-    box-shadow: 0px 0px 16px 0px #ff00c7;
+    box-shadow: 0px 0px 16px 0px #f7d621;
   }
 `
 
@@ -333,7 +333,7 @@ export default function Landing() {
             name={SharedEventName.ELEMENT_CLICKED}
             element={InterfaceElementName.LANDING_PAGE_SWAP_ELEMENT}
           >
-            <Link to="/swap">
+            <Link to="/swap?inputCurrency=ETH&outputCurrency=0xb1a822ce8c799b0777ed1f260113819247e1bf26">
               <LandingSwap />
             </Link>
           </TraceEvent>
@@ -342,12 +342,14 @@ export default function Landing() {
         <GlowContainer>
           <Glow />
         </GlowContainer>
+       
         <ContentContainer isDarkMode={isDarkMode}>
+        <img src='/images/logo.png'  width={"50%"}/>
           <TitleText isDarkMode={isDarkMode}>
             {shouldDisableNFTRoutes ? (
-              <Trans>Trade crypto with confidence</Trans>
+              <Trans>Welcome to $FTX DEX</Trans>
             ) : (
-              <Trans>Trade crypto and NFTs with confidence</Trans>
+              <Trans>Welcome to $FTX DEX</Trans>
             )}
           </TitleText>
           <SubTextContainer>
@@ -365,51 +367,18 @@ export default function Landing() {
               name={SharedEventName.ELEMENT_CLICKED}
               element={InterfaceElementName.CONTINUE_BUTTON}
             >
-              <ButtonCTA as={Link} to="/swap">
+              <ButtonCTA as={Link} to="/swap?inputCurrency=ETH&outputCurrency=0xb1a822ce8c799b0777ed1f260113819247e1bf26">
                 <ButtonCTAText>
                   <Trans>Get started</Trans>
                 </ButtonCTAText>
               </ButtonCTA>
             </TraceEvent>
           </ActionsContainer>
-          <LearnMoreContainer
-            onClick={() => {
-              cardsRef?.current?.scrollIntoView({ behavior: 'smooth' })
-            }}
-          >
-            <Trans>Learn more</Trans>
-            <LearnMoreArrow />
-          </LearnMoreContainer>
+  
 
-          <DownloadWalletLink
-            {...getDownloadAppLinkProps({
-              // landing page specific tracking params
-              microSiteParams: `utm_source=home_page&utm_medium=webapp&utm_campaign=wallet_microsite&utm_id=1`,
-              appStoreParams: `ct=Uniswap-Home-Page&mt=8`,
-            })}
-          >
-            <AppleLogo width="20" height="20" />
-            Download the Uniswap Wallet for iOS
-          </DownloadWalletLink>
+      
         </ContentContainer>
-        <AboutContentContainer isDarkMode={isDarkMode}>
-          <CardGrid cols={cards.length} ref={cardsRef}>
-            {cards.map(({ darkBackgroundImgSrc, lightBackgroundImgSrc, ...card }) => (
-              <Card
-                {...card}
-                backgroundImgSrc={isDarkMode ? darkBackgroundImgSrc : lightBackgroundImgSrc}
-                key={card.title}
-              />
-            ))}
-          </CardGrid>
-          <CardGrid cols={3}>
-            {MORE_CARDS.map(({ darkIcon, lightIcon, ...card }) => (
-              <Card {...card} icon={isDarkMode ? darkIcon : lightIcon} key={card.title} type={CardType.Secondary} />
-            ))}
-          </CardGrid>
-          <ProtocolBanner />
-          <AboutFooter />
-        </AboutContentContainer>
+    
       </PageContainer>
     </Trace>
   )

@@ -15,27 +15,11 @@
   "tokens": [
     {
       "chainId": 1,
-      "address": "0x111111111117dC0aa78b770fA6A738034120C302",
-      "name": "1inch",
-      "symbol": "1INCH",
+      "address": "0xb1a822ce8c799b0777ed1f260113819247e1bf26",
+      "name": "HairyPlotterFTX",
+      "symbol": "FTX",
       "decimals": 18,
-      "logoURI": "https://assets.coingecko.com/coins/images/13469/thumb/1inch-token.png?1608803028",
-      "extensions": {
-        "bridgeInfo": {
-          "56": {
-            "tokenAddress": "0x111111111117dC0aa78b770fA6A738034120C302"
-          },
-          "137": {
-            "tokenAddress": "0x9c2C5fd7b07E95EE044DDeba0E97a665F142394f"
-          },
-          "42161": {
-            "tokenAddress": "0x6314C31A7a1652cE482cffe247E9CB7c3f4BB9aF"
-          },
-          "43114": {
-            "tokenAddress": "0xd501281565bf7789224523144Fe5D98e8B28f267"
-          }
-        }
-      }
+      "logoURI": "https://assets.coingecko.com/coins/images/32116/large/HairyPlotterFTX.png?1696585812"
     },
     {
       "chainId": 1,

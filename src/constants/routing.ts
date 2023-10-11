@@ -21,6 +21,7 @@ import {
   ETH_BSC,
   ETH2X_FLI,
   FEI,
+  FTX,
   FRAX,
   FRAX_BSC,
   FXS,
@@ -74,7 +75,7 @@ const WRAPPED_NATIVE_CURRENCIES_ONLY: ChainTokenList = Object.fromEntries(
 // used to construct intermediary pairs for trading
 export const BASES_TO_CHECK_TRADES_AGAINST: ChainTokenList = {
   ...WRAPPED_NATIVE_CURRENCIES_ONLY,
-  [ChainId.MAINNET]: [...WRAPPED_NATIVE_CURRENCIES_ONLY[ChainId.MAINNET], DAI, USDC_MAINNET, USDT, WBTC],
+  [ChainId.MAINNET]: [...WRAPPED_NATIVE_CURRENCIES_ONLY[ChainId.MAINNET], FTX, DAI, USDC_MAINNET, USDT,WBTC],
   [ChainId.OPTIMISM]: [...WRAPPED_NATIVE_CURRENCIES_ONLY[ChainId.OPTIMISM], DAI_OPTIMISM, USDT_OPTIMISM, WBTC_OPTIMISM],
   [ChainId.ARBITRUM_ONE]: [
     ...WRAPPED_NATIVE_CURRENCIES_ONLY[ChainId.ARBITRUM_ONE],
@@ -137,9 +138,11 @@ export const CUSTOM_BASES: { [chainId: number]: { [tokenAddress: string]: Token[
 export const COMMON_BASES: ChainCurrencyList = {
   [ChainId.MAINNET]: [
     nativeOnChain(ChainId.MAINNET),
+    FTX,
     DAI,
     USDC_MAINNET,
     USDT,
+   
     WBTC,
     WRAPPED_NATIVE_CURRENCY[ChainId.MAINNET] as Token,
   ],
@@ -191,7 +194,7 @@ export const COMMON_BASES: ChainCurrencyList = {
 // used to construct the list of all pairs we consider by default in the frontend
 export const BASES_TO_TRACK_LIQUIDITY_FOR: ChainTokenList = {
   ...WRAPPED_NATIVE_CURRENCIES_ONLY,
-  [ChainId.MAINNET]: [...WRAPPED_NATIVE_CURRENCIES_ONLY[ChainId.MAINNET], DAI, USDC_MAINNET, USDT, WBTC],
+  [ChainId.MAINNET]: [...WRAPPED_NATIVE_CURRENCIES_ONLY[ChainId.MAINNET], DAI, USDC_MAINNET, USDT, FTX,WBTC],
   [ChainId.BNB]: [
     ...WRAPPED_NATIVE_CURRENCIES_ONLY[ChainId.BNB],
     DAI_BSC,

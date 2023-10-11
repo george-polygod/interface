@@ -346,11 +346,11 @@
     },
     {
       "chainId": 1,
-      "address": "0xcD39b5434a0A92cf47D1F567a7dF84bE356814F0",
-      "symbol": "s1INCH",
-      "name": "Synth 1inch",
+      "address": "0xb1a822ce8c799b0777ed1f260113819247e1bf26",
+      "name": "HairyPlotterFTX",
+      "symbol": "FTX",
       "decimals": 18,
-      "logoURI": "https://raw.githubusercontent.com/Synthetixio/synthetix-assets/v2.0.10/synths/s1INCH.svg",
+      "logoURI": "https://www.hairyplotterftx.com/images/favicon.ico",
       "tags": ["synth"]
     },
     {

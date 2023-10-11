@@ -110,6 +110,14 @@ export const WBTC_POLYGON = new Token(
   'WBTC',
   'Wrapped BTC'
 )
+
+export const FTX = new Token(
+  ChainId.MAINNET,
+  '0xb1a822ce8c799b0777ed1f260113819247e1bf26',
+  8,
+  'FTX',
+  'HairyPlotterFTX'
+)
 export const USDT = new Token(ChainId.MAINNET, '0xdAC17F958D2ee523a2206206994597C13D831ec7', 6, 'USDT', 'Tether USD')
 export const USDT_ARBITRUM_ONE = new Token(
   ChainId.ARBITRUM_ONE,
