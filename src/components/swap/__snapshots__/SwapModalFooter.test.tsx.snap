@@ -290,7 +290,7 @@ exports[`SwapModalFooter.tsx matches base snapshot, test trade exact input 1`] =
 }
 
 .c5 {
-  background-color: #804b2b;
+  background-color: #11A9BC;
   font-size: 20px;
   font-weight: 600;
   padding: 16px;

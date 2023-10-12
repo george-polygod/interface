@@ -203,8 +203,8 @@ exports[`data page listings table content loads with a given asset 1`] = `
   cursor: pointer;
   -webkit-transition-duration: 125ms;
   transition-duration: 125ms;
-  color: #804b2b;
-  stroke: #804b2b;
+  color: #11A9BC;
+  stroke: #11A9BC;
   font-weight: 500;
 }
 
@@ -718,8 +718,8 @@ exports[`data page offers table content loads with a given asset 1`] = `
   cursor: pointer;
   -webkit-transition-duration: 125ms;
   transition-duration: 125ms;
-  color: #804b2b;
-  stroke: #804b2b;
+  color: #11A9BC;
+  stroke: #11A9BC;
   font-weight: 500;
 }
 

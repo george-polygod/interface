@@ -112,7 +112,7 @@ exports[`should inject metadata for valid assets 1`] = `
 
       @media (prefers-color-scheme: light) {
         html {
-          background: radial-gradient(100% 100% at 50% 0%, rgba(255, 184, 226, 0.51) 0%, rgba(255, 255, 255, 0) 100%), #FFFFFF
+          background: radial-gradient(100% 100% at 50% 0%, #11A9BC 0%, rgba(255, 255, 255, 0) 100%), #FFFFFF
         }
       }
     </style>
@@ -244,7 +244,7 @@ exports[`should inject metadata for valid assets 2`] = `
 
       @media (prefers-color-scheme: light) {
         html {
-          background: radial-gradient(100% 100% at 50% 0%, rgba(255, 184, 226, 0.51) 0%, rgba(255, 255, 255, 0) 100%), #FFFFFF
+          background: radial-gradient(100% 100% at 50% 0%, #11A9BC 0%, rgba(255, 255, 255, 0) 100%), #FFFFFF
         }
       }
     </style>
@@ -376,7 +376,7 @@ exports[`should inject metadata for valid assets 3`] = `
 
       @media (prefers-color-scheme: light) {
         html {
-          background: radial-gradient(100% 100% at 50% 0%, rgba(255, 184, 226, 0.51) 0%, rgba(255, 255, 255, 0) 100%), #FFFFFF
+          background: radial-gradient(100% 100% at 50% 0%, #11A9BC 0%, rgba(255, 255, 255, 0) 100%), #FFFFFF
         }
       }
     </style>
