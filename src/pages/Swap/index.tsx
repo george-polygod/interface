@@ -411,13 +411,18 @@ export function Swap({
   const handleSwap = useCallback(() => {
 
 
-    track('Swaps');
+    
+
+   
     if (!swapCallback) {
       return
     }
     if (stablecoinPriceImpact && !confirmPriceImpactWithoutFee(stablecoinPriceImpact)) {
       return
     }
+
+  
+
     setSwapState((currentState) => ({
       ...currentState,
       swapError: undefined,
@@ -425,6 +430,8 @@ export function Swap({
     }))
     swapCallback()
       .then((result) => {
+
+        track('Swaps');
         setSwapState((currentState) => ({
           ...currentState,
           swapError: undefined,
