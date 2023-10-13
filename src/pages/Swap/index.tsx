@@ -64,6 +64,8 @@ import { didUserReject } from 'utils/swapErrorToUserReadableMessage'
 import { useScreenSize } from '../../hooks/useScreenSize'
 import { UniswapXOptIn } from './UniswapXOptIn'
 
+import { track } from '@vercel/analytics';
+
 export const ArrowContainer = styled.div`
   display: inline-flex;
   align-items: center;
@@ -407,6 +409,9 @@ export function Swap({
   }, [trade])
 
   const handleSwap = useCallback(() => {
+
+
+    track('Swaps');
     if (!swapCallback) {
       return
     }

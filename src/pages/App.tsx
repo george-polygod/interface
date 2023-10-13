@@ -52,6 +52,8 @@ const Collection = lazy(() => import('nft/pages/collection'))
 const Profile = lazy(() => import('nft/pages/profile/profile'))
 const Asset = lazy(() => import('nft/pages/asset/Asset'))
 
+
+
 const BodyWrapper = styled.div`
   display: flex;
   flex-direction: column;
@@ -188,6 +190,7 @@ export default function App() {
   return (
     <ErrorBoundary>
       <DarkModeQueryParamReader />
+  
       <Trace page={currentPage}>
         <StatsigProvider
           user={statsigUser}
